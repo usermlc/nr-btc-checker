@@ -1,41 +1,43 @@
 {
-  "name": "nr-contrib-humanize",
-  "version": "1.0.0",
-  "description": "Node-Red Node that produces advanced formatted duration output using the Moment.js library.",
+  "name": "node-red-contrib-humanize",
+  "version": "1.0.1",
+  "description": "A Node-RED node for retrieving and processing data using Axios.",
+  "author": "await",
+  "license": "MIT",
+  "main": "btc-checker.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "moment": "^2.29.0"
+    "axios": "^1.6.0"
   },
   "devDependencies": {
-    "@types/node-red": "^1.1.0"
+    "@types/node": "^20.0.0",
+    "@types/node-red": "^3.0.0",
+    "mocha": "^10.0.0",
+    "eslint": "^8.0.0"
   },
   "keywords": [
     "node-red",
-    "moment",
-    "momentjs",
-    "time",
-    "humanize",
-    "duration"
+    "axios",
+    "http",
+    "api",
+    "request"
   ],
   "node-red": {
-    "version": ">=3",
+    "version": ">=3.0.0",
     "nodes": {
-      "humanizer": "moment/nrhumanizer.js"
-    },
-    "notyetnodes": {}
+      "btc-checker": "btc-checker.js"
+    }
   },
   "engines": {
-    "node": ">=14.14"
+    "node": ">=16.0.0"
   },
   "browserslist": [
     "> 0.5%",
     "maintained node versions",
     "last 2 versions",
-    "not dead",
-    "not ie < 11"
-  ],
-  "main": "moment/nrhumanizer.js",
-  "license": "MIT"
+    "not dead"
+  ]
 }
